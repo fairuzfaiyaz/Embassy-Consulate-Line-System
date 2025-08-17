@@ -103,6 +103,7 @@ void requestToken(string visaType) {
     if (totalApplicants >= MAX_TOTAL_APPLICANTS) {
         cout << "Daily limit reached." << endl;
         return;
+
     }
 
     Queue* q = getQueue(visaType); // Get correct queue
