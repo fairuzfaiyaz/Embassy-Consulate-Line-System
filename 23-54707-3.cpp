@@ -164,6 +164,7 @@ void callNextCustomer(int counterIndex) {
         if (candidates[i]->size() > maxSize) {
             maxSize = candidates[i]->size();
             longest = i;
+
         }
     }
 
@@ -173,6 +174,7 @@ void callNextCustomer(int counterIndex) {
     }
     else {
         cout << "Counter " << counterIndex + 1 << ": No applicants remaining to serve." << endl;
+
     }
 }
 
@@ -199,6 +201,7 @@ void generateSummaryReport() {
             // List all served tokens for the counter
             for (int j = 0; j < counters[i].served; ++j) {
                 cout << counters[i].servedTypes[j] << "-" << counters[i].servedTokens[j];
+                // Add comma if not the last served token
                 if (j < counters[i].served - 1) cout << ", ";
             }
         }
